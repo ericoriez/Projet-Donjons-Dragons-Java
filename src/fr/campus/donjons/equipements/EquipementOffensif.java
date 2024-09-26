@@ -1,3 +1,5 @@
+package fr.campus.donjons.equipements;
+
 public abstract class EquipementOffensif {
 
     protected String type;

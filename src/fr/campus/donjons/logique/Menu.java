@@ -1,3 +1,10 @@
+package fr.campus.donjons.logique;
+
+import fr.campus.donjons.personnages.GuerrierSpecial;
+import fr.campus.donjons.personnages.Guerriers;
+import fr.campus.donjons.personnages.Magiciens;
+import fr.campus.donjons.personnages.Personnage;
+
 import java.util.Scanner; // Importation de la classe Scanner pour gérer les entrées utilisateur
 
 public class Menu {

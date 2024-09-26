@@ -1,4 +1,11 @@
-public class Magiciens extends Personnage{
+package fr.campus.donjons.personnages;
+
+import fr.campus.donjons.equipements.EquipementDefensif;
+import fr.campus.donjons.equipements.EquipementOffensif;
+import fr.campus.donjons.equipements.Philtre;
+import fr.campus.donjons.equipements.Sort;
+
+public class Magiciens extends Personnage {
     private EquipementOffensif equipementOffensif;
     private EquipementDefensif equipementDefensif;
     public Magiciens(String nom) {
@@ -6,7 +13,7 @@ public class Magiciens extends Personnage{
         this.niveauDeVie = 6;
         this.forceAttaque =15;
         this.equipementOffensif = new Sort(" Sort ", "Boule de feu", 18);
-        this.equipementDefensif = new Philtre(" Philtre ", "Carapace", 15);
+        this.equipementDefensif = new Philtre(" Philtre ", "Potion", 15);
 
     }
 

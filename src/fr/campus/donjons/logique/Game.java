@@ -1,7 +1,11 @@
+package fr.campus.donjons.logique;
+
+import fr.campus.donjons.personnages.Personnage;
+
 import java.util.Scanner; // Importation de la classe Scanner pour gérer les entrées utilisateur
 
 public class Game {
-    private Menu menu = new Menu(); // Instance de la classe Menu pour gérer l'interface utilisateur
+    private Menu menu = new Menu(); // Instance de la classe fr.campus.donjons.logique.Menu pour gérer l'interface utilisateur
     private Personnage personnage;  // Le personnage qui sera créé par l'utilisateur
     private boolean personnageCree = false;  // Booléen pour savoir si un personnage a déjà été créé
 

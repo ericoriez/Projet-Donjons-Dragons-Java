@@ -1,4 +1,6 @@
-public class Arme extends EquipementOffensif{
+package fr.campus.donjons.equipements;
+
+public class Arme extends EquipementOffensif {
     public Arme(String type, String nom, int puissance){
         super(type, nom, puissance);
     }

@@ -1,3 +1,8 @@
+package fr.campus.donjons.personnages;
+
+import fr.campus.donjons.equipements.EquipementDefensif;
+import fr.campus.donjons.equipements.EquipementOffensif;
+
 public abstract class Personnage {
     // Attributs
     protected String nom;
@@ -39,7 +44,7 @@ public abstract class Personnage {
     // Méthode toString pour afficher les informations du personnage
 
     public String toString() {
-        return "Personnage :" +
+        return " Personnage :" +
         " Nom: " + nom +
         " Niveau de vie: " + niveauDeVie +
         " Force d'attaque: " + forceAttaque +

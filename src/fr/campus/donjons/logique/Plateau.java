@@ -1,3 +1,8 @@
+package fr.campus.donjons.logique;
+
+import fr.campus.donjons.personnages.GuerrierSpecial;
+import fr.campus.donjons.personnages.Personnage;
+
 import java.util.Random;
 
 public class Plateau {
@@ -19,7 +24,7 @@ public class Plateau {
             int de1 = random.nextInt(6) + 1;
             int de2 = random.nextInt(6) + 1;
 
-            // Vérifier si le personnage est une instance de GuerrierSpecial
+            // Vérifier si le personnage est une instance de fr.campus.donjons.personnages.GuerrierSpecial
             if (personnage instanceof GuerrierSpecial) {
                 GuerrierSpecial guerrierSpecial = (GuerrierSpecial) personnage;
                 guerrierSpecial.regenVie(de1, de2);  // Utiliser la méthode spéciale

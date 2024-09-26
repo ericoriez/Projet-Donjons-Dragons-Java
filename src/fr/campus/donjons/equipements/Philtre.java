@@ -1,4 +1,6 @@
-public class Philtre  extends EquipementDefensif{
+package fr.campus.donjons.equipements;
+
+public class Philtre  extends EquipementDefensif {
      public Philtre(String type, String nom, int defense) {
 
          super(type, nom, defense);

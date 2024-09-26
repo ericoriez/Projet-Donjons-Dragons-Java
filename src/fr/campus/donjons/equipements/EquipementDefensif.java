@@ -1,3 +1,5 @@
+package fr.campus.donjons.equipements;
+
 public class EquipementDefensif {
     protected String nom;
     protected int niveauDefense;

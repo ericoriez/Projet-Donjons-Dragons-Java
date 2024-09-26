@@ -1,3 +1,5 @@
+package fr.campus.donjons.personnages;
+
 public class GuerrierSpecial extends Guerriers {
     public GuerrierSpecial(String nom) {
         super(nom);

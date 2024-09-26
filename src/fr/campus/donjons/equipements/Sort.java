@@ -1,4 +1,6 @@
-public class Sort extends EquipementOffensif{
+package fr.campus.donjons.equipements;
+
+public class Sort extends EquipementOffensif {
 
     public Sort(String type, String nom, int puissance) {
 

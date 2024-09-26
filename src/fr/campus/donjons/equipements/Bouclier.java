@@ -1,4 +1,6 @@
-public class Bouclier extends EquipementDefensif{
+package fr.campus.donjons.equipements;
+
+public class Bouclier extends EquipementDefensif {
 
     public Bouclier(String type, String nom, int defense){
 

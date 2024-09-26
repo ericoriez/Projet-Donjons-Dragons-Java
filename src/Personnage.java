@@ -1,49 +1,51 @@
-public class Personnage {
-    private String nom;
-    private String type;
-    private int niveauDeVie;
-    private int forceAttaque;
-
-    // CONSTRUCTEUR
-    public Personnage() {
-
-    }
+public abstract class Personnage {
+    // Attributs
+    protected String nom;
+    protected int niveauDeVie;
+    protected int forceAttaque;
+    protected EquipementOffensif equipementOffensif;
+    protected EquipementDefensif equipementDefensif;
+    protected String vie_max;
+    protected String attaque_max ;
+    // Constructeur avec nom
     public Personnage(String nom) {
         this.nom = nom;
-
-    }
-    public Personnage(String nom, String type) {
-        this.nom = nom;
-        this.type = type;
     }
 
+    // Getters et Setters pour chaque attribut
+  public String getNom() {
+      return nom;
+  }
+  public int getNiveauDeVie() {
+      return niveauDeVie;
+  }
+  public int getForceAttaque() {
+      return forceAttaque;
+  }
+  public EquipementOffensif getEquipementOffensif() {
+        return equipementOffensif;
+  }
+  public EquipementDefensif getEquipementDefensif() {
+        return equipementDefensif;
+  }
+  public String getVie_max() {
+        return vie_max;
+  }
+  public String getAttaque_max() {
+        return attaque_max;
+  }
 
 
+    // Méthode toString pour afficher les informations du personnage
 
-    // GETTER SETTER
-    public String getNom() {
-        return nom;
+    public String toString() {
+        return "Personnage :" +
+        " Nom: " + nom +
+        " Niveau de vie: " + niveauDeVie +
+        " Force d'attaque: " + forceAttaque +
+        " Equipement Offensif: " + equipementOffensif  +
+        " Equipement Defensif: " + equipementDefensif +
+        " Vie max: " + vie_max +
+        " Attaque max: " + attaque_max;
     }
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-    public String getType() {
-        return type;
-    }
-    public void setType(String type) {
-        this.type = type;
-    }
-    public int getNiveauDeVie() {
-        return niveauDeVie;
-    }
-    public void setNiveauDeVie(int niveauDeVie) {
-        this.niveauDeVie = niveauDeVie;
-    }
-    public int getForceAttaque() {
-        return forceAttaque;
-    }
-    public void setForceAttaque(int forceAttaque) {
-        this.forceAttaque = forceAttaque;
-    }
-
 }

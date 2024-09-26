@@ -1,32 +1,38 @@
 public class EquipementDefensif {
+    protected String nom;
+    protected int niveauDefense;
+    protected  String type;
 
-    private String type;
-    private int niveauDeDefense;
-    private String nom;
-
-    public EquipementDefensif(String type, int niveauDeDefense, String nom) {
+    // Constructeur
+    public EquipementDefensif(String type, String nom, int niveauDefense) {
         this.type = type;
-        this.niveauDeDefense = niveauDeDefense;
         this.nom = nom;
+        this.niveauDefense = niveauDefense;
+    }
 
+    // Getters Setters
+    public String getNom() {
+        return nom;
+    }
+    public int getNiveauDefense() {
+        return niveauDefense;
     }
     public String getType() {
         return type;
     }
-    public int getNiveauDeDefense() {
-        return niveauDeDefense;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
-    public String getNom() {
-        return nom;
+    public void setNiveauDefense(int niveauDefense) {
+        this.niveauDefense = niveauDefense;
     }
     public void setType(String type) {
         this.type = type;
     }
-    public void setNiveauDeDefense(int niveauDeDefense) {
-        this.niveauDeDefense = niveauDeDefense;
-    }
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
 
+
+    @Override
+    public String toString() {
+        return type + nom + " (Puissance : " + niveauDefense + ")";
+    }
 }

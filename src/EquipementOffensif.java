@@ -1,30 +1,45 @@
-public class EquipementOffensif {
-    private String type;
-    private int niveauAttaque;
-    private String nom;
+public abstract class EquipementOffensif {
 
-    public EquipementOffensif(String type, int niveauAttaque, String nom) {
+    protected String type;
+    protected String nom;
+    protected int puissance;
+
+
+
+    public EquipementOffensif( String type, String nom, int puissance) {
         this.type = type;
-        this.niveauAttaque = niveauAttaque;
         this.nom = nom;
+        this.puissance = puissance;
+    }
+
+
+
+    public String getNom() {
+        return nom;
+    }
+    public int getPuissance() {
+        return puissance;
     }
     public String getType() {
         return type;
     }
-    public int getNiveauAttaque() {
-        return niveauAttaque;
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
-    public String getNom() {
-        return nom;
+    public void setPuissance(int puissance) {
+        this.puissance = puissance;
     }
     public void setType(String type) {
         this.type = type;
     }
-    public void setNiveauAttaque(int niveauAttaque) {
-        this.niveauAttaque = niveauAttaque;
-    }
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
 
+
+
+
+
+
+    public String toString() {
+        return type + nom + " (Puissance : " + puissance + ")";
+    }
 }

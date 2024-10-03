@@ -1,11 +1,23 @@
 package fr.campus.donjons.equipements;
 
-public class Sort extends EquipementOffensif {
+import fr.campus.donjons.logique.Case;
+import fr.campus.donjons.personnages.Personnage;
 
-    public Sort(String type, String nom, int puissance) {
+public class Sort extends EquipementOffensif implements Case {
 
-        super(type, nom, puissance);
+    public Sort(int id, String type, String nom, int puissance) {
+
+        super(id, type, nom, puissance);
     }
+
+    @Override
+    public void interagir(Personnage personnage) {
+        System.out.println("Vous trouver un sort : " + nom + " ! La puissance d'attaque du magicien augmente. ");
+        if(personnage instanceof  fr.campus.donjons.personnages.Magiciens){
+            ((fr.campus.donjons.personnages.Magiciens) personnage).SetEquipementOffensif(this);
+        }
+    }
+
 
     @Override
     public String toString() {

@@ -2,14 +2,14 @@ package fr.campus.donjons.equipements;
 
 public class EquipementDefensif {
     protected String nom;
-    protected int niveauDefense;
+    protected int defense;
     protected  String type;
 
     // Constructeur
-    public EquipementDefensif(String type, String nom, int niveauDefense) {
+    public EquipementDefensif(String type, String nom, int defense) {
         this.type = type;
         this.nom = nom;
-        this.niveauDefense = niveauDefense;
+        this.defense = defense;
     }
 
     // Getters Setters
@@ -17,7 +17,7 @@ public class EquipementDefensif {
         return nom;
     }
     public int getNiveauDefense() {
-        return niveauDefense;
+        return defense;
     }
     public String getType() {
         return type;
@@ -26,7 +26,7 @@ public class EquipementDefensif {
         this.nom = nom;
     }
     public void setNiveauDefense(int niveauDefense) {
-        this.niveauDefense = niveauDefense;
+        this.defense = niveauDefense;
     }
     public void setType(String type) {
         this.type = type;
@@ -35,6 +35,7 @@ public class EquipementDefensif {
 
     @Override
     public String toString() {
-        return type + nom + " (Puissance : " + niveauDefense + ")";
+//        return type + nom + " (Puissance : " + niveauDefense + ")";
+        return this.getClass().getSimpleName() + nom + " (Puissance : " + defense + ")";
     }
 }

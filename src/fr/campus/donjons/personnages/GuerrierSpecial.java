@@ -1,9 +1,15 @@
 package fr.campus.donjons.personnages;
 
 public class GuerrierSpecial extends Guerriers {
+    public GuerrierSpecial(String nom, int niveauDeVie, int forceAttaque) {
+        super(nom, niveauDeVie, forceAttaque);
+        this.niveauDeVie = 3;
+    }
+
     public GuerrierSpecial(String nom) {
         super(nom);
         this.niveauDeVie = 3;
+        this.forceAttaque = 20;
     }
 
     public void regenVie(int de1, int de2){

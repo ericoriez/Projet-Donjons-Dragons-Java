@@ -8,6 +8,6 @@ public class Philtre  extends EquipementDefensif {
 
      @Override
     public String toString() {
-         return type + " [Nom : " + nom + ", Defense : " + niveauDefense + "]";
+         return type + " [Nom : " + nom + ", Defense : " + defense + "]";
      }
 }

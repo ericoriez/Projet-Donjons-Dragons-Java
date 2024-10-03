@@ -5,6 +5,7 @@ import fr.campus.donjons.equipements.EquipementOffensif;
 
 public abstract class Personnage {
     // Attributs
+    protected int id;
     protected String nom;
     protected int niveauDeVie;
     protected int forceAttaque;
@@ -18,22 +19,51 @@ public abstract class Personnage {
     }
 
     // Getters et Setters pour chaque attribut
-  public String getNom() {
+
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNom() {
       return nom;
   }
   public int getNiveauDeVie() {
       return niveauDeVie;
   }
-  public int getForceAttaque() {
+
+    public void setNiveauDeVie(int niveauDeVie) {
+        this.niveauDeVie = niveauDeVie;
+    }
+
+    public int getForceAttaque() {
       return forceAttaque;
   }
+
+  public void setForceAttaque(int forceAttaque) {
+        this.forceAttaque = forceAttaque;
+  }
+
   public EquipementOffensif getEquipementOffensif() {
         return equipementOffensif;
   }
-  public EquipementDefensif getEquipementDefensif() {
+
+    public void setEquipementOffensif(EquipementOffensif equipementOffensif) {
+        this.equipementOffensif = equipementOffensif;
+    }
+
+    public EquipementDefensif getEquipementDefensif() {
         return equipementDefensif;
   }
-  public String getVie_max() {
+
+    public void setEquipementDefensif(EquipementDefensif equipementDefensif) {
+        this.equipementDefensif = equipementDefensif;
+    }
+
+    public String getVie_max() {
         return vie_max;
   }
   public String getAttaque_max() {

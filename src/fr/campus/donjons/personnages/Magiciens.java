@@ -14,16 +14,16 @@ public class Magiciens extends Personnage {
         super(nom);
         this.niveauDeVie = 7;
         this.forceAttaque = 15;
-        this.equipementOffensif = new Sort(1," Sort ", "Boule de feu", 18);
-        this.equipementDefensif = new Philtre(" Philtre ", "Potion", 15);
+        this.equipementOffensif = null;
+        this.equipementDefensif = null;
 
     }
     public Magiciens(String nom, int niveauDeVie, int forceAttaque) {
         super(nom);
         this.niveauDeVie = niveauDeVie;
         this.forceAttaque = forceAttaque;
-        this.equipementOffensif = new Sort(1," Sort ", "Boule de feu", 18);
-        this.equipementDefensif = new Philtre(" Philtre ", "Potion", 15);
+        this.equipementOffensif = null;
+        this.equipementDefensif = null;
 
     }
 
@@ -37,8 +37,10 @@ public class Magiciens extends Personnage {
     }
 
 
-
+    @Override
     public String toString() {
-        return "Magiciens : " + nom + " Vie: " + niveauDeVie + " Force: " + forceAttaque + " Equipement Offensif: " + equipementOffensif + " Equipement Defensif: " + equipementDefensif;
+        return "Guerriers : " + nom + " Vie: " + niveauDeVie + " Force: " + forceAttaque +
+                " Equipement Offensif: " + (equipementOffensif != null ? equipementOffensif : "Aucun") +
+                " Equipement Defensif: " + (equipementDefensif != null ? equipementDefensif : "Aucun");
     }
 }

@@ -11,8 +11,6 @@ public abstract class Personnage {
     protected int forceAttaque;
     protected EquipementOffensif equipementOffensif;
     protected EquipementDefensif equipementDefensif;
-    protected String vie_max;
-    protected String attaque_max ;
     // Constructeur avec nom
     public Personnage(String nom) {
         this.nom = nom;
@@ -63,12 +61,7 @@ public abstract class Personnage {
         this.equipementDefensif = equipementDefensif;
     }
 
-    public String getVie_max() {
-        return vie_max;
-  }
-  public String getAttaque_max() {
-        return attaque_max;
-  }
+
 
 
     // Méthode toString pour afficher les informations du personnage
@@ -79,8 +72,6 @@ public abstract class Personnage {
         " Niveau de vie: " + niveauDeVie +
         " Force d'attaque: " + forceAttaque +
         " Equipement Offensif: " + equipementOffensif  +
-        " Equipement Defensif: " + equipementDefensif +
-        " Vie max: " + vie_max +
-        " Attaque max: " + attaque_max;
+        " Equipement Defensif: " + equipementDefensif;
     }
 }

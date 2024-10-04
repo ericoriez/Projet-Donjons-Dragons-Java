@@ -1,4 +1,4 @@
-package fr.campus.donjons.logique;
+package fr.campus.donjons.cases;
 
 import fr.campus.donjons.personnages.Personnage;
 

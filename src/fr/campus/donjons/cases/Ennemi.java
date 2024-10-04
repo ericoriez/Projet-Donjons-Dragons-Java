@@ -1,6 +1,6 @@
-package fr.campus.donjons.personnages;
+package fr.campus.donjons.cases;
 
-import fr.campus.donjons.logique.Case;
+import fr.campus.donjons.personnages.Personnage;
 
 public class Ennemi  implements Case {
     @Override

@@ -1,6 +1,6 @@
 package fr.campus.donjons.equipements;
 
-import fr.campus.donjons.logique.Case;
+import fr.campus.donjons.cases.Case;
 import fr.campus.donjons.personnages.Personnage;
 
 public class PotionStandard extends Potions implements Case{

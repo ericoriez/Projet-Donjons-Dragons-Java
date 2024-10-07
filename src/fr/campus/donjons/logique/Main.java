@@ -1,13 +1,18 @@
 package fr.campus.donjons.logique;
 
-import fr.campus.donjons.db.HeroRepository;
-
-import java.sql.SQLException;
-
+/**
+ * La classe Main est le point d'entrée du jeu Donjons & Dragons.
+ * Elle initialise une instance de la classe Game et lance la partie.
+ */
 public class Main {
-public static void main(String[] args) {
-    Game game = new Game();
-    game.start();
 
- }
+    /**
+     * Méthode principale qui démarre le programme.
+     *
+     * @param args Arguments de la ligne de commande (non utilisés).
+     */
+    public static void main(String[] args) {
+        Game game = new Game();
+        game.start();
+    }
 }

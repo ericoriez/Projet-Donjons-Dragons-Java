@@ -1,40 +1,60 @@
 package fr.campus.donjons.logique;
+
 import fr.campus.donjons.db.HeroRepository;
 import fr.campus.donjons.personnages.GuerrierSpecial;
 import fr.campus.donjons.personnages.Guerriers;
 import fr.campus.donjons.personnages.Magiciens;
 import fr.campus.donjons.personnages.Personnage;
-
 import java.sql.SQLException;
 import java.util.Scanner; // Importation de la classe Scanner pour gérer les entrées utilisateur
 
+/**
+ * La classe Menu gère les différents menus du jeu Donjons & Dragons,
+ * permettant de créer, choisir et démarrer une partie avec un personnage.
+ */
 public class Menu {
 
-    // Initialisation d'un scanner pour lire les entrées utilisateur
+    /**
+     * Scanner pour lire les entrées utilisateur.
+     */
     private Scanner scanner = new Scanner(System.in);
+
+    /**
+     * Repository pour la gestion des héros (création, récupération, etc.).
+     */
     private HeroRepository heroRepository = new HeroRepository();
 
-    // Méthode pour afficher le menu d'accueil du jeu
+    /**
+     * Affiche le menu d'accueil du jeu.
+     */
     public void afficherMenuAccueil() {
         System.out.println("Bienvenue dans le jeu Donjons & Dragons !");
         System.out.println("1. Créer ou Choisir un personnage");
         System.out.println("2. Quitter");
     }
 
-    // Méthode pour afficher le menu de création de personnage
+    /**
+     * Affiche le menu de création ou de choix de personnage.
+     */
     public void afficherMenuCreationPersonnage() {
         System.out.println("1. Créer un nouveau personnage");
         System.out.println("2. Choisir un personnage existant");
         System.out.println("3. Quitter");
     }
 
-    // Méthode pour afficher le menu de la partie (démarrer ou quitter)
+    /**
+     * Affiche le menu de la partie pour démarrer ou quitter le jeu.
+     */
     public void afficherMenuPartie() {
         System.out.println("1. Démarrer la partie");
         System.out.println("2. Quitter");
     }
 
-    // Méthode pour créer un nouveau personnage en fonction du choix de l'utilisateur
+    /**
+     * Permet de créer un nouveau personnage ou de choisir un personnage existant.
+     *
+     * @return Le personnage créé ou choisi par l'utilisateur, ou {@code null} en cas d'erreur ou de choix de quitter.
+     */
     public Personnage creerOuChoisirPersonnage() {
         afficherMenuCreationPersonnage();  // Affiche le menu de création ou choix du personnage
         int choix = scanner.nextInt();
@@ -98,8 +118,11 @@ public class Menu {
         }
     }
 
-
-    // Méthode pour afficher les informations du personnage
+    /**
+     * Affiche les informations du personnage donné.
+     *
+     * @param personnage Le personnage dont les informations doivent être affichées.
+     */
     public void afficherPersonnage(Personnage personnage) {
         // Utilise la méthode toString() du personnage pour afficher ses infos
         System.out.println(personnage.toString());

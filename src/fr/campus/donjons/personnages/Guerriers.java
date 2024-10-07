@@ -1,7 +1,5 @@
 package fr.campus.donjons.personnages;
 
-import fr.campus.donjons.equipements.Arme;
-import fr.campus.donjons.equipements.Bouclier;
 import fr.campus.donjons.equipements.EquipementDefensif;
 import fr.campus.donjons.equipements.EquipementOffensif;
 

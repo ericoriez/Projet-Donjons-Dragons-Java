@@ -2,8 +2,7 @@ package fr.campus.donjons.personnages;
 
 import fr.campus.donjons.equipements.EquipementDefensif;
 import fr.campus.donjons.equipements.EquipementOffensif;
-import fr.campus.donjons.equipements.Philtre;
-import fr.campus.donjons.equipements.Sort;
+
 
 public class Magiciens extends Personnage {
     private EquipementOffensif equipementOffensif;

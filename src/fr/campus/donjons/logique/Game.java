@@ -4,20 +4,42 @@ import fr.campus.donjons.db.HeroRepository;
 import fr.campus.donjons.personnages.Personnage;
 import java.util.Scanner;
 
+/**
+ * La classe Game gère le déroulement global du jeu Donjons & Dragons,
+ * incluant la gestion des menus, la création de personnages, et le démarrage de la partie.
+ */
 public class Game {
 
-    private final Menu menu = new Menu();  // Instance de la classe Menu
-    private final HeroRepository heroRepository = new HeroRepository();  // Instance du repository des héros
-    private Plateau plateau;  // Instance du plateau de jeu
-    private Personnage personnage;  // Le personnage créé par l'utilisateur
+    /**
+     * Instance de la classe Menu pour gérer les différents menus du jeu.
+     */
+    private final Menu menu = new Menu();
 
-    // Méthode principale qui gère le déroulement du jeu
+    /**
+     * Instance du repository des héros pour gérer la persistance des personnages.
+     */
+    private final HeroRepository heroRepository = new HeroRepository();
+
+    /**
+     * Plateau de jeu sur lequel se déroule la partie.
+     */
+    private Plateau plateau;
+
+    /**
+     * Le personnage créé ou choisi par l'utilisateur.
+     */
+    private Personnage personnage;
+
+    /**
+     * Méthode principale qui gère le déroulement du jeu.
+     * Affiche le menu principal, permet de créer ou choisir un personnage et de démarrer une partie.
+     */
     public void start() {
         boolean continuer = true;  // Indicateur pour continuer ou arrêter le jeu
         Scanner scanner = new Scanner(System.in);  // Scanner pour lire les entrées utilisateur
 
         while (continuer) {
-            menu.afficherMenuAccueil();  // Afficher le menu d'accueil une seule fois pour choisir de créer ou de quitter
+            menu.afficherMenuAccueil();  // Afficher le menu d'accueil
             int choix = scanner.nextInt();
             scanner.nextLine();
 
@@ -39,7 +61,9 @@ public class Game {
         }
     }
 
-    // Méthode pour démarrer la partie
+    /**
+     * Démarre la partie en initialisant un plateau et en créant une instance de Partie.
+     */
     private void demarrerPartie() {
         System.out.println("La partie commence !");
         plateau = new Plateau();  // Créer un nouveau plateau
@@ -47,7 +71,11 @@ public class Game {
         partie.lancerPartie();  // Lancer la partie avec le personnage sur le plateau
     }
 
-    // Méthode pour afficher le menu de la partie (démarrer ou quitter)
+    /**
+     * Affiche le menu de la partie permettant de démarrer ou de quitter la partie.
+     *
+     * @param scanner Scanner pour lire les entrées utilisateur.
+     */
     private void afficherMenuPartie(Scanner scanner) {
         boolean partieEnCours = true;
 

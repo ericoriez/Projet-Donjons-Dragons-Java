@@ -15,10 +15,4 @@ public class PotionStandard extends Potions implements Case{
         personnage.setNiveauDeVie(personnage.getNiveauDeVie() + getLvlVie());
     }
 
-//    @Override
-//    public String toString() {
-//        return "Potion : "
-//    }
-
-
 }
